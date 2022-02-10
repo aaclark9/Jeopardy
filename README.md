@@ -1,2 +1,2 @@
 # Jepoardy
-Choose the file for your version and download the appropriate question file.
+Choose the file for your OS and download the appropriate question file.
