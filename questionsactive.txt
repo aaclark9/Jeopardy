@@ -1,0 +1,27 @@
+True or False::Vocabulary::Grammar::Spelling::Reading Comprehension
+200::400::600::800::1000
+True or False::200:: The Kabuki performances at the Lincoln Center in New York were a great success.:: True
+True or False::400:: Government statistics show that there are only a few people who want to see Kabuki performances in Japan.:: False
+True or False::600:: The first kabuki performance was performed by only men.:: False
+True or False::800:: Super Kabuki includes new ideas to make kabuki more appealing:: True
+True or False::1000:: Heisei Nakamura-za has performed abroad without making any changes from their performances in Japan:: False
+Vocabulary::200:: 傾く:: lean
+Vocabulary::400:: 起源:: Origin
+Vocabulary::600:: 材料:: Material
+Vocabulary::800:: 同世代の人々:: Generations
+Vocabulary::1000:: 調整:: Adjustment
+Grammar::200:: Mr. Green missed the interview ________ the train arrived late.:: because
+Grammar::400:: Mary is interested in ____ economics ___ mathematics.:: both, and
+Grammar::600:: I'll give you my phone number ________ you _____ contact me anytime:: so that, you
+Grammar::800:: He was ____ a clever boy _____ he learned the long poem by heart:: such, that
+Grammar::1000:: You have to follow the doctor's advice ________ you like it _______:: whether, or not
+Spelling::200:: 適合させる: _ _ _ _ _ :: Adapt
+Spelling::400:: 幕府:  _ _ _ _ _ _ _ _ _ :: Shogunate
+Spelling::600:: 文化的な: _ _ _ _ _ _ _ _ :: Cultural
+Spelling::800:: 登場, 出現: _ _ _ _ _ _ _ _ _ _ :: Appearance
+Spelling::1000:: 熱狂的に:                                        _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  :: Enthusiastically
+Reading Comprehension::200:: Who helped Kabuki develop into one of Japan's best-loved art forms?:: Tokugawa Shogunate
+Reading Comprehension::400:: What does the verb kabuki mean?:: It means "to lean" or "to be different."
+Reading Comprehension::600:: Where did Kabuki first tour outside of Japan?::They toured in the Soviet Union in 1928.
+Reading Comprehension::800:: When did artists in Europe and other countries begin to notice kabuki?:: They began to notice kabuki as cultural relations with the west developed after Japan opened its borders in 1854.
+Reading Comprehension::1000:: What adjustments has Heisei Nakamura-za made to keep Kabuki interesting to foreign audiences?::They incorporate English into their performances, interact with the audience in English, and allow America staff to participate in the performance.
