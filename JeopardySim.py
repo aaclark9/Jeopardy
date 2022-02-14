@@ -122,8 +122,10 @@ def Startmenu():
         tmlbls = []
         lblclmn=0
         for i in teamlst:
+            i.score = 0
             if c >= 1:
-               tmlbls.append(tk.Label(root, text=i.name + ': ' + str(i.score)).grid(row=0, column=lblclmn))
+               tmlbls.append(tk.Label(root, text=i.name + ': ' + str(i.score)))
+               tmlbls[lblclmn].grid(row=0, column=lblclmn)
                lblclmn = lblclmn + 1
                c = c - 1
             
@@ -154,40 +156,49 @@ def Startmenu():
                 qsttiletlist.append(j)
                 #create button that calls btnclick when pressed
                 qbtns.append(tk.Button(root, text=j.points, 
-                            command=lambda c=qbtncnt: btnclick(qsttiletlist[c],tmlbls,teamlst)))
+                            command=lambda c=qbtncnt: btnclick(qsttiletlist[c],tmlbls,teamlst,qbtns[c])))
                 qbtns[qbtncnt].grid(row=btnrow, column=catx, sticky='news',
                                     pady=0, padx=0)
                 btnrow=btnrow+1
                 qbtncnt=qbtncnt+1
             catx+=1
-        #print(qbtns)
+        
        
        
-    def btnclick(btncall,tmlbls,teamlst):
+    def btnclick(btncall,tmlbls,teamlst,qbtns):
         #print(btncall.question)
+        qbtns.destroy()
         qstmenu=tk.Tk()
         qstmenu.configure(bg='dodgerblue')
         qstmenu.title(btncall.category)
         qstmenu.state('zoomed') #windows
+        qstmenu.rowconfigure([0,1,2,3], weight=1)
+        qstmenu.columnconfigure([0,1,2,3,4], weight=1)
         qstbtn = tk.Button(qstmenu, text='Question:' + btncall.question, font=("Helvetica",50), 
                           wraplength= qstmenu.winfo_screenwidth(), bg='dodgerblue',
                           command=lambda :QuestionClick(btncall, qstmenu) )
-        qstbtn.grid(row=0, column=0)
-        for i in tmlbls:
-            btn= tk.Button(qstmenu, text=str(i.self.text), bg='white', 
-                           command= lambda :calcscore(i, teamlst, btncall, qstmenu))
-        extbtn = tk.Button(qstmenu, text='exit', bg='white', 
+        qstbtn.grid(row=0, column=0, columnspan=5)
+        tmindex=0
+        while tmindex < len(tmlbls):
+            btn= tk.Button(qstmenu, text=teamlst[tmindex].name, bg='white', 
+                           command= lambda tm=tmindex:calcscore(tmlbls[tm], teamlst[tm], btncall, 
+                                                      qstmenu))
+            btn.grid(row=2, column=tmindex)
+            tmindex=tmindex + 1
+        extbtn = tk.Button(qstmenu, text='No-body', bg='white', 
                            command= qstmenu.destroy) #windows, test on linux
-        extbtn.grid(row=2)
-    def calcscore(i, teamlst, btncall, qstmenu):
-        teamlst.self.score = teamlst.self.score + btncall.points
-        i.self.text = str(teamlst.score)
-        qstmenu.destroy
+        extbtn.grid(row=3)
+    def calcscore(tmlbls, teamlst, btncall, qstmenu):
+        
+        teamlst.score = teamlst.score + btncall.points
+        
+        tmlbls.configure(text = teamlst.name + ': ' + str(teamlst.score))
+        qstmenu.destroy()
     def QuestionClick(btncall, qstmenu):
         anslbl= tk.Label(qstmenu, text='Answer:' + btncall.answer, 
                          font=("Helvetica",50), bg='dodgerblue',
                          wraplength= qstmenu.winfo_screenwidth())
-        anslbl.grid(row=1)
+        anslbl.grid(row=1, column=0, columnspan = 5)
         
         #qstmenu.attributes('-zoomed', True) #linux
         
@@ -220,7 +231,7 @@ def Startmenu():
         team=Teamscore(name='team ' + str(i), score=0)
         teamlst.append(team)
         
-        teambtn.append(tk.Button(root, text=str(i) + ' team(s)', 
+        teambtn.append(tk.Button(root, text=str(i) + ' team(s)',
                                  command=lambda c=i: Gamescreen(c, teamlst)))
         teambtn[i-1].grid(row=1, column=i-1,sticky='news', pady=50)
     
