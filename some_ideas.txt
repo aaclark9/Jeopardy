@@ -1,0 +1,27 @@
+Movies::English Abbreviations::Holidays Around the World::Famous People::Music
+200::400::600::800::1000
+Movies::200::Which Disney movie is about a girl who becomes friends with a blue alien?::Lilo and Stitch
+Movies::400::What are the names of the three main characters in Harry Potter?::Ron Weasley, Hermione Granger, and Harry Potter 
+Movies::600::Kiki’s Delivery Service is a popular movie by Hayao Miyazaki. What is the Japanese name of this movie?::魔女の宅急便
+Movies::800::Which Japanese animation movie won the Los Angeles Film Critics Association’s 2016 Award for Best Animated Film?::Your Name - 君の名は
+Movies::1000::What is the highest-grossing Japanse film ever made?::At 40.43 Billion \ - Demon Slayer: Kimetsu no Yaiba – The Movie: Mugen Train - 劇場版「鬼滅の刃」 無限列車編
+English Abbreviations::200::ASAP::As Soon As Possible
+English Abbreviations::400::LOL::Laugh Out Loud
+English Abbreviations::600::FYI::For Your Information
+English Abbreviations::800::TTYL::Talk To You Later
+English Abbreviations::1000::AFAIK::As Far As I Know
+Holidays Around the World::200::What is the most popular holiday in the US?::Christmas
+Holidays Around the World::400::Why are Chinese cutouts of 春 and 福 put upside down?::They are put upside down because "good fortune comes" sounds like "good fortune upside down" in Chinese
+Holidays Around the World::600::In which of the following countries is White Day celebrated? USA, Taiwan, South Korea, Canada::Taiwan and South Korea
+Holidays Around the World::800::In Tibet, what is the Lunar New Year called?::Losar
+Holidays Around the World::1000::During what holiday do people in the Middle East fast from dawn until dusk?::Ramadan
+Famous People::200::What Japanese Baseball player plays for the Los Angeles Cardinals::Shohei Ohtani
+Famous People::400::Who is Andrew Sensei's favorite TV star?::Matsuko deluxe
+Famous People::600::Which famous Japanese comedian moved to New York in 2021?::Naomi Watanabe
+Famous People::800::What US president shares a name with a Japanese city?::Obama
+Famous People::1000::Which Japanese prime minister studied at the same university as Erick Sensei?::Shinzo Abe
+Music::200::msc200.mp3:What video game is this melody from?::Pokemon (Pokemon Center)
+Music::400::msc400.mp3:What anime is this song from?::Haikyuu!! (アイム・ア・ビリーバー)
+Music::600::msc600.mp3:What J-pop artist sang this song?::Aimyon (愛を伝えたいだとか)
+Music::800::msc800.mp3:What American band sang this song?::Maroon 5 (Sugar)
+Music::1000::msc1000.mp3:What K-pop artist sang this song?::AKMU (Give Love)

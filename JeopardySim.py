@@ -7,8 +7,11 @@ Created on Mon Feb  7 12:08:39 2022
 import tkinter as tk
 #import random
 import ctypes
+import os
+#from PIL import Image
 
 ctypes.windll.shcore.SetProcessDpiAwareness(1)
+
 
 class InvalidGameFile(Exception):
     pass
@@ -58,6 +61,7 @@ class Teamscore:
     def __repr__(self):
         return self.__str__()
     
+
     
 def readGameBoard(gameFile):
     # Read the entire file into memory
@@ -147,7 +151,7 @@ def Startmenu():
         
             
         #Read file with questions
-        qsttile, categories = readGameBoard('questionsactive.txt')
+        qsttile, categories = readGameBoard('some_ideas.txt')
         for k in categories:
             catlbl = tk.Label(catfrm, text=k)
             catlbl.grid(row=1, column=catx, sticky='nsew',pady=0, padx=0)
@@ -172,22 +176,47 @@ def Startmenu():
         qstmenu.configure(bg='dodgerblue')
         qstmenu.title(btncall.category)
         qstmenu.state('zoomed') #windows
+        #qstmenu.attributes('-zoomed', True) #linux
         qstmenu.rowconfigure([0,1,2,3], weight=1)
         qstmenu.columnconfigure([0,1,2,3,4], weight=1)
-        qstbtn = tk.Button(qstmenu, text='Question:' + btncall.question, font=("Helvetica",50), 
+        
+        if btncall.category == 'Music':
+            mscpath = []
+            mscpath = btncall.question.split(":")
+            mscbtn = tk.Button(qstmenu, text='play', command= lambda: os.system(mscpath[0]))
+            mscbtn.grid(row=3, column=4, sticky='news')
+            qstbtn = tk.Button(qstmenu, text=mscpath[1] , font=("Helvetica",50), 
                           wraplength= qstmenu.winfo_screenwidth(), bg='dodgerblue',
                           command=lambda :QuestionClick(btncall, qstmenu) )
-        qstbtn.grid(row=0, column=0, columnspan=5)
+            qstbtn.grid(row=0, column=0, columnspan=5)
+            
+# =============================================================================
+#         elif btncall.category == 'Picture':
+#             imgpath = Image.open(btncall.question)
+#             #picim = tk.PhotoImage(imgpath)
+#             picbtn = tk.Button(qstmenu, image=imgpath)
+#             picbtn.grid(row=0, column=0, columnspan=3)
+#             qstbtn = tk.Button(qstmenu, text='Question: Who is this?', font=("Helvetica",50), 
+#                           wraplength= qstmenu.winfo_screenwidth(), bg='dodgerblue',
+#                           command=lambda :QuestionClick(btncall, qstmenu) )
+#             qstbtn.grid(row=0, column=1, columnspan=2)
+# =============================================================================
+        else:
+            qstbtn = tk.Button(qstmenu, text='Question:' + btncall.question, font=("Helvetica",50), 
+                          wraplength= qstmenu.winfo_screenwidth(), bg='dodgerblue',
+                          command=lambda :QuestionClick(btncall, qstmenu) )
+            qstbtn.grid(row=0, column=0, columnspan=5)
+            
         tmindex=0
         while tmindex < len(tmlbls):
             btn= tk.Button(qstmenu, text=teamlst[tmindex].name, bg='white', 
                            command= lambda tm=tmindex:calcscore(tmlbls[tm], teamlst[tm], btncall, 
                                                       qstmenu))
-            btn.grid(row=2, column=tmindex)
+            btn.grid(row=2, column=tmindex, sticky='news')
             tmindex=tmindex + 1
         extbtn = tk.Button(qstmenu, text='No-body', bg='white', 
                            command= qstmenu.destroy) #windows, test on linux
-        extbtn.grid(row=3)
+        extbtn.grid(row=3, sticky='news')
     def calcscore(tmlbls, teamlst, btncall, qstmenu):
         
         teamlst.score = teamlst.score + btncall.points
