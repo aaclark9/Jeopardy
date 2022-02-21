@@ -5,7 +5,7 @@ Created on Mon Feb  7 12:08:39 2022
 @author: user190344
 """
 import tkinter as tk
-#import random
+import random
 import ctypes
 import os
 #from PIL import Image
@@ -103,13 +103,18 @@ def readGameBoard(gameFile):
                                 answer=parts[3])
             # Make a new list for a new category in nested list
             if parts[0] not in qsttile:
-                qsttile[parts[0]] = []
-                qsttile[parts[0]].append(gameTile)
+                qsttile[parts[0]] = {}
+                if int(parts[1]) not in qsttile[parts[0]]:
+                    qsttile[parts[0]][int(parts[1])] = []
+                    qsttile[parts[0]][int(parts[1])].append(gameTile)
             else:
-                # or add to existing list
-                qsttile[parts[0]].append(gameTile)
+                if int(parts[1]) not in qsttile[parts[0]]:
+                    qsttile[parts[0]][int(parts[1])] = []
+                    qsttile[parts[0]][int(parts[1])].append(gameTile)
+                else:
+                    qsttile[parts[0]][int(parts[1])].append(gameTile)
                 
-    return qsttile, categories # Return dictionary and category list
+    return qsttile, categories, points # Return dictionary and category list
 
 def Startmenu():
         
@@ -118,49 +123,59 @@ def Startmenu():
         
         
         
-        root = tk.Tk()
-        root.state('zoomed') #Windows
+        Gs = tk.Toplevel()
+        Gs.state('zoomed') #Windows
         #root.attributes('-zoomed', True) #Linux
-        root.configure(bg='dodgerblue')
-        root.title('English Jeopardy')
+        Gs.configure(bg='dodgerblue')
+        Gs.title('English Jeopardy')
         tmlbls = []
         lblclmn=0
         for i in teamlst:
             i.score = 0
             if c >= 1:
-               tmlbls.append(tk.Label(root, text=i.name + ': ' + str(i.score)))
+               tmlbls.append(tk.Label(Gs, text=i.name + ': ' + str(i.score) ,font=("Helvetica",30),wraplength= root.winfo_screenwidth()/5))
                tmlbls[lblclmn].grid(row=0, column=lblclmn)
                lblclmn = lblclmn + 1
                c = c - 1
             
                 
         #split root into different sections rows and columns
-        root.rowconfigure([0,1,2,3,4,5,6], weight=1,pad=2)
-        root.columnconfigure([0,1,2,3,4], weight=1, pad=2)
+        Gs.rowconfigure([0,1,2,3,4,5,6], weight=1,pad=2)
+        Gs.columnconfigure([0,1,2,3,4], weight=1, pad=2)
         #Category frame for holding section titles
-        catfrm = tk.Frame(root, bg='dodgerblue') 
+        catfrm = tk.Frame(Gs, bg='dodgerblue') 
         catfrm.grid(row=1, column=0, columnspan=5, sticky='news',pady=0, padx=0 )
         catfrm.columnconfigure([0,1,2,3,4], weight=1)
         catx=0
         
         #initialize lists to hold buttons and qsttile
         qbtns= []
-        qsttiletlist = []
+        qsttilelist=[]
         qbtncnt=0
         
         
             
         #Read file with questions
-        qsttile, categories = readGameBoard('some_ideas.txt')
+        qsttile, categories, points = readGameBoard('some_ideas.txt')
+        
         for k in categories:
-            catlbl = tk.Label(catfrm, text=k)
+            
+            catlbl = tk.Label(catfrm, text=k, font=("Helvetica",30),wraplength= catfrm.winfo_screenwidth()/5)
             catlbl.grid(row=1, column=catx, sticky='nsew',pady=0, padx=0)
             btnrow=2
-            for j in qsttile[k]:
-                qsttiletlist.append(j)
+            for p in points:
+                #make a list for each point category
+                tempqsttilelist = []
+                for j in qsttile[k][p]:
+                    #hold quesions for each point value in each category
+                    tempqsttilelist.append(j)
+                    
+                #choose a random question for each button
+                rndqst = random.randint(0,len(tempqsttilelist)-1)
+                qsttilelist.append(tempqsttilelist[rndqst])
                 #create button that calls btnclick when pressed
-                qbtns.append(tk.Button(root, text=j.points, 
-                            command=lambda c=qbtncnt: btnclick(qsttiletlist[c],tmlbls,teamlst,qbtns[c])))
+                qbtns.append(tk.Button(Gs, text=qsttilelist[qbtncnt].points, font= ("Helvetica",20),wraplength= root.winfo_screenwidth()/5,
+                        command=lambda c=qbtncnt: btnclick(qsttilelist[c],tmlbls,teamlst,qbtns[c])))
                 qbtns[qbtncnt].grid(row=btnrow, column=catx, sticky='news',
                                     pady=0, padx=0)
                 btnrow=btnrow+1
@@ -172,7 +187,7 @@ def Startmenu():
     def btnclick(btncall,tmlbls,teamlst,qbtns):
         #print(btncall.question)
         qbtns.destroy()
-        qstmenu=tk.Tk()
+        qstmenu=tk.Toplevel()
         qstmenu.configure(bg='dodgerblue')
         qstmenu.title(btncall.category)
         qstmenu.state('zoomed') #windows
@@ -202,7 +217,7 @@ def Startmenu():
 #             qstbtn.grid(row=0, column=1, columnspan=2)
 # =============================================================================
         else:
-            qstbtn = tk.Button(qstmenu, text='Question:' + btncall.question, font=("Helvetica",50), 
+            qstbtn = tk.Button(qstmenu, text='Question: ' + btncall.question, font=("Helvetica",50), 
                           wraplength= qstmenu.winfo_screenwidth(), bg='dodgerblue',
                           command=lambda :QuestionClick(btncall, qstmenu) )
             qstbtn.grid(row=0, column=0, columnspan=5)
@@ -224,7 +239,7 @@ def Startmenu():
         tmlbls.configure(text = teamlst.name + ': ' + str(teamlst.score))
         qstmenu.destroy()
     def QuestionClick(btncall, qstmenu):
-        anslbl= tk.Label(qstmenu, text='Answer:' + btncall.answer, 
+        anslbl= tk.Label(qstmenu, text='Answer: ' + btncall.answer, 
                          font=("Helvetica",50), bg='dodgerblue',
                          wraplength= qstmenu.winfo_screenwidth())
         anslbl.grid(row=1, column=0, columnspan = 5)

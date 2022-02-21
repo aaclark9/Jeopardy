@@ -1,0 +1,126 @@
+Science::Geography::Sports::Music Trivia::Music
+200::400::600::800::1000
+Science::200::What does your heart pump?::Blood
+Science::200::Which is the nearest star?::The Sun
+Science::200::Which is heavier, gold or silver?::Gold
+Science::200::What is H2O?::Water
+Science::200::How many legs does a butterfly have?::Six
+Geography::200::Which is bigger, a lake or an ocean?::An Ocean
+Geography::200::Which country has the most people?::China
+Geography::200::Wat is the capita city of Norway?::Oslo
+Geography::200::What is the biggest state in the U.S.A?::Alaska
+Geography::200::Which country has the biggest land area?::Russia
+Geography::200::In which ocean is Hawaii?::The Pacific Ocean
+Sports::200::What does NBA stand for?::National Basketball Association
+Sports::200::In what game is "love" a score?::Tennis
+Sports::200::What country does the soccer player Romario come from?::Brazil
+Sports::200::What is the most popular indoor sport in the U.S.A?::Basketball
+Sports::200::How many players are on a baseball team?::9 players
+Sports::200::In soccer, what body part can't touch the ball?(besides the goalie)::Hands
+Music Trivia::200::How many strings does a violin have?::Four
+Music Trivia::200::What do you use to listen to music?::Ears
+Music Trivia::200::What is the smallest instrument in a traditional orchestra?::The Piccolo
+Music Trivia::200::What colors are the keys on a piano?::Black and White
+Music Trivia::200::Which instrument is often used in jazz music, a saxaphone or a tuba?::a saxaphone
+Music Trivia::200::How many strings does a bass guitar usually have?::Four
+Music::200::msc200.mp3:What video game is this melody from?::Pokemon (Pokemon Center)
+Science::400::Blood is filtered by which pair of organs?::The Kidneys
+Science::400::Which planet is the fifth from the sun?::Jupiter
+Science::400::Who developed the theory of relativity?::Albert Einstein
+Science::400::Which chemical element is represented bu the symbol "N"::Nitrogen
+Science::400::In which organelle os a living cell is DNA found?::Nucleus
+Science::400::Which travels faster, light or sound?::Light
+Geography::400::In Which country is the Eiffel Tower?::France
+Geography::400::What is bigger, a hill or a mountian?::A Mountain
+Geography::400::Which is larger, a river or a stream?::A River
+Geography::400::On which continent is the Sahara desert?::Africa
+Geography::400::Name the two longest rivers in the world.::The Amazon river and the Nile river
+Geography::400::Which oceab is the the east of Africa?::Indian Ocean
+Sports::400::What is the longest running race in the Olympic Games called?::The marathon
+Sports::400::What is used to hit a Tennis ball?::Tennis racquet
+Sports::400::Which sport uses a net, a racket, and a shuttlecock?::Badminton
+Sports::400::Which of the follow spots does not use a ball? Golf, tennis, hockey, or polo?::Hockey
+Sports::400::In which sport can you throw a 'curve ball?'::Baseball
+Sports::400::What type of race is the Tour de France?::Bicycle race
+Music Trivia::400::Which J-pop artist sang 愛を伝えたいだとか?::Aimyon
+Music Trivia::400::Which k-pop artist sang Give Love?::AKMU
+Music Trivia::400::Which classical composer became deaf near the end of his life?::Beethoven
+Music Trivia::400::In what section of a classical orchestra are there drums?::The percussion section
+Music Trivia::400::In what country did reggae music originate?::Jamaica
+Music Trivia::400::How many instruments are there in a string quintet?::five
+Music::400::msc400.mp3:What anime is this song from?::Haikyuu!! (アイム・ア・ビリーバー)
+Science::600::Which vitamin is abundant in citrus fruits?::Vitamin C
+Science::600::What instrument is used for measuring temperature?::A Thermometer
+Science::600::Who developed the theory of evolution by natural selection?::Charles Darwin
+Science::600::Name one gas that plants absorb from the atmosphere.::Carbon Dioxide, Oxygen, Nitrogen, Hydrogen
+Science::600::What do we call a shape with eight sides?::Octagon
+Science::600::What is the study of plants called?::Botany
+Geography::600::Which country do Dutch people come from?::Holland
+Geography::600::How many continents are there on Earth?::7
+Geography::600::What is the tallest mountian in the world?::Everest
+Geography::600::In which country is Mount Everest?::Nepal
+Geography::600::Which continent has the biggest population?::Asia
+Geography::600::What is the capital city of New Zealand?::Wellington
+Sports::600::In which sport would you use a 'sand iron'?::Golf
+Sports::600::In boxing, what do the letters K.O. stand for?::Knock Out
+Sports::600::Baseball originated in the U.S.A in which century?::19th century
+Sports::600::How many rings are there in the Olympic Games symbol?::Five
+Sports::600::In which country were the 2018 Olympic Games held::South Korea
+Sports::600::What sport is played at Wimbledon?::Tennis
+Music Trivia::600::Which female pop singer had a big hit called 'Baby, One More Time'?::Britney Spears
+Music Trivia::600::What pop group was Micheal Jackson a member of when he was young?:: The Jackson Five
+Music Trivia::600::What type of music di Louis Armstrong play?::Jazz
+Music Trivia::600::What does an orchestra's cunductor wave to keep time?::Baton
+Music Trivia::600::What nationality was Mozart?::Austrian
+Music Trivia::600::Which singer usually sings rap music, Mariah Carey or Eminem?::Eminem
+Music::600::msc600.mp3:What J-pop artist sang this song?::Aimyon (愛を伝えたいだとか)
+Science::800::What is NaCl?::Salt
+Science::800::What is the hardest natural substance?::Diamond
+Science::800::What gas do all fuels need in order to burn?::Oxygen
+Science::800::Which planet is closest to the sun?::Mercury
+Science::800::What are the three primary colors?::Red, Yellow, and Blue
+Science::800::What does a prism create from light?::Rainbow
+Geography::800::Which South American country has the greatest land area?::Brazil
+Geography::800::What is the capital city of Sri Lanka?::Colombo
+Geography::800::Which climate is generally hotter and more humid, tropical or temperate?:: Tropical
+Geography::800::What do we call a mountian which could erupt?::A Volcano
+Geography::800::Antarctica covers whch of the earth's poles?:: The South Pole
+Geography::800::On which continent is Sierra Leone?::Africa
+Sports::800::In which athletic event is a heavy metal ball thrown?::Shot put
+Sports::800::In what sport could you 'hit a six' or 'bowl a leg spinner'?::Cricket
+Sports::800::Golf was first played in which country?::Scotland
+Sports::800::In which sport could you find yourself in a headlock?::Wrestling
+Sports::800::In which sport are a bow and arrow used?::Archery
+Sports::800::What does a third-place getter at the Olympics Games win?::A Bronze Medal
+Music Trivia::800::What instrument did the jazz musician Miles Davis play?::Trumpet
+Music Trivia::800::What nationality is Robbe Williams?::British
+Music Trivia::800::Which intrument has keys, pedals, and strings?::Piano
+Music Trivia::800::In which country is a 'gamelan orchestra most commonly found?::Indonesia
+Music Trivia::800::What pop group was Howie D. in?::The Backstreet Boys
+Music Trivia::800::Which is the largest string instrument in a classical orchestra?::The Double Bass
+Music::800::msc800.mp3:What American band sang this song?::Maroon 5 (Sugar)
+Science::1000::Triton is a moon which planet?::Neptune
+Science::1000::For what process do plants need sunlight, CO2, and water?::Photosynthesis
+Science::1000::Which physicist wrote a book called 'A Brief History of Time'?::Stephen Hawking
+Science::1000::Which chemical elemet is represented by the symbol Zn?::Zinc
+Science::1000::In which organ of the body is the cerebrum found?::The Brain
+Science::1000::What do we call the study of birds?::Ornithology
+Geography::1000::In which country is the world's highest waterfall?::Venezuela
+Geography::1000::What natural phenomena are measured by the 'Richter scale'?::Earthquakes
+Geography::1000::Which two oceans doe sthe Pananma Canal link?::The Atlantic and Pacific oceans
+Geography::1000::What is South America's highest mountain range?::The Andes
+Geography::1000::What is the capital city of Kenya?::Nairobi
+Geography::1000::What is the line of latitube 23.5 degrees north of the equator called?::Tropic of Cancer
+Sports::1000::What is the diameter of a basketball hoop?::46 cm
+Sports::1000::In what year were women allowed to compete in the modern Olympic games and in what sport?::1900, tennis
+Sports::1000::In Which sport was Muhammad Ali the world champion?::Boxing
+Sports::1000::In which winter sport are the term "stale fish" and "mule kick" used?:: Snowboarding
+Sports::1000::How many minutes was the longest recorded point in the history of tennis?::29 minutes
+Sports::1000::How long is the free skate in figure skating?::4.5 minutes for men, 4 minutes for women
+Music Trivia::1000::Who wrote the song entitled 'Yesterday'?::Paul McCartney
+Music Trivia::1000::Which British rock group do Liam and Noel Gallagher belong to?::Oasis
+Music Trivia::1000::Which rock rop is Micheal Stipe the lead singer of?::REM
+Music Trivia::1000::Which pop singer married British movie director Guy Ritchie?::Madonna
+Music Trivia::1000::Which rock group did George Harrison belong to?::The Beattles
+Music Trivia::1000::Where was Ricky Martin born?::Puerto Rico
+Music::1000::msc1000.mp3:What K-pop artist sang this song?::AKMU (Give Love)
