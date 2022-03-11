@@ -156,7 +156,7 @@ def Startmenu():
         
             
         #Read file with questions
-        qsttile, categories, points = readGameBoard('some_ideas.txt')
+        qsttile, categories, points = readGameBoard('random_trivia.txt')
         
         for k in categories:
             
